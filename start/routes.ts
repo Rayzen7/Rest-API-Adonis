@@ -31,4 +31,9 @@ router.post('/user/login', [AuthController, 'login'])
 router.get('/user', [AuthController, 'getuser']).use(middleware.token())
 
 router.get('/news', [NewsController, 'index'])
+router.get('/news/:id', [NewsController, 'show'])
+router.put('/news/:id', [NewsController, 'update'])
+router.delete('/news/:id', [NewsController, 'destroy'])
+router.post('/news', [NewsController, 'store'])
+
 router.get('/category', [NewsCategoriesController, 'index'])

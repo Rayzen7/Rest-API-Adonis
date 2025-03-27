@@ -25,3 +25,11 @@ export const AuthValidator = vine.compile(
     password: vine.string(),
   })
 )
+
+export const NewsValidator = vine.compile(
+  vine.object({
+    name: vine.string(),
+    desc: vine.string(),
+    id_category: vine.number(),
+  })
+)
